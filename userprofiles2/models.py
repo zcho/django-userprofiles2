@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
-
+from phonenumber_field.modelfields import PhoneNumberField
 
 GENDER = (('man', 'Man'), ('woman', 'Woman'))
 
@@ -9,7 +9,7 @@ GENDER = (('man', 'Man'), ('woman', 'Woman'))
 class UserProfile(models.Model):
     user = models.OneToOneField(User, null=True, related_name="profile",
                                 verbose_name=_('User'), on_delete=models.CASCADE)
-    phone = models.PositiveIntegerField(
+    phone = PhoneNumberField(
         null=True, blank=True, verbose_name=_('Phone'))
     gender = models.CharField(
         max_length=40, blank=True, verbose_name=_('Gender'), choices=GENDER)

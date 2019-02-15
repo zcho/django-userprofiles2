@@ -13,7 +13,6 @@ class IdentiteForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('first_name', 'last_name', 'gender', 'phone',)
-        widgets = {'phone': forms.TextInput()}
 
     def __init__(self, *args, **kwargs):
         super(IdentiteForm, self).__init__(*args, **kwargs)

@@ -1,2 +1,4 @@
 django-allauth
 django-avatar
+django-phonenumber-field
+phonenumbers

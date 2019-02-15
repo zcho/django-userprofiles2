@@ -19,6 +19,7 @@ Installed apps:
 'allauth.socialaccount',
 'avatar',
 'userprofiles2',
+'phonenumber_field',
   ```
   
 Be sure to have ``SITE_ID = 1`` in settings.

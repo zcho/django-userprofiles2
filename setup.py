@@ -24,6 +24,8 @@ setup(
     install_requires=[
         "django-allauth",
         "django-avatar",
+        "django-phonenumber-field",
+        "phonenumbers",
     ],
     zip_safe=False
 )
